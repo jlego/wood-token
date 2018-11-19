@@ -5,9 +5,8 @@
  */
 const Token = require('./src/token');
 
-module.exports = (app, config = {}) => {
-  if(app){
-    app.Token = Token;
-  }
-  return Token;
+module.exports = (app = {}, config = {}) => {
+  app.Token = Token;
+  if(app.addAppProp) app.addAppProp('Token', app.Token);
+  return app;
 }
