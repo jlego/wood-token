@@ -6,7 +6,7 @@ class Token {
   constructor(opts = {}) {
     this.config = {
       expire: 3600 * 24 * 7,
-      secret: 'minikv3.account',
+      secret: 'wood.account',
       ...opts
     };
   }
